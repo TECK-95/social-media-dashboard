@@ -168,6 +168,12 @@ main {
     padding: 10px;
 }
 
+.trending img {
+    border-radius: 0;
+    width: 100px;
+    height: 75px;
+}
+
 footer {
     background-color: black;
     color: white;
