@@ -25,10 +25,23 @@ header {
 .banner {
     width: 100%;
     height: 100%;
-    border: solid 1px green;
+    background: linear-gradient(45deg, #BED3EF 0%, #D3D6E9 100%, #B6D0D8 100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border: solid 2px black;
 }
 
 main {
@@ -43,14 +56,25 @@ main {
 }
 
 .user-bar {
-    border: solid 1px greenyellow;
+    background: linear-gradient(45deg, #bed3ef9f 0%, #d3d6e954 100%, #B6D0D8 100%);
     grid-area: user-bar;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-welcome {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.post-buttons {
     display: flex;
     justify-content: space-between;
 }
 
 .dashboard {
-    border: solid 1px red;
     width: 100%;
     height: 100%;
     grid-area: dashboard;
@@ -67,7 +91,7 @@ main {
 }
 
 .content {
-    border: solid 1px blue;
+    background: linear-gradient(45deg, #bed3ef9f 0%, #d3d6e954 100%, #B6D0D8 100%);
     grid-area: content;
     display: grid;
     grid-template: 1fr 1fr / 2fr 1fr;
@@ -89,12 +113,20 @@ main {
 }
 
 footer {
+    background-color: black;
+    color: white;
     width: 100vw;
     height: minmax(5vh, 15vh);
     grid-area: footer;
-    border: solid 1px grey;
+    text-align: center;
 }
 
 h1 {
-    color: red;
+    color: black;
+    text-shadow: 1px 1px 1px #6A667E;
+    padding: 5px;
+}
+
+p {
+    padding: 5px;
 }
