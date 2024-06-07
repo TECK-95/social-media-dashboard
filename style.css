@@ -53,8 +53,8 @@ header {
 }
 
 .profile-picture {
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     border: solid 2px black;
 }
 
@@ -63,7 +63,7 @@ main {
     height: 100%;
     grid-area: main;
     display: grid;
-    grid-template: 1fr 5fr / 1fr 5fr;
+    grid-template: auto-fit auto-fit / auto-fit auto-fit;
     grid-template-areas:
         "dashboard user-bar"
         "dashboard content";
@@ -82,13 +82,13 @@ main {
 .user-welcome {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
 }
 
 .post-buttons {
     display: flex;
-    gap: 10px;
-    padding: 10px;
+    gap: 50px;
+    padding-right: 100px;
 }
 
 .dashboard {
@@ -109,11 +109,15 @@ main {
     padding: 10px;
 }
 
+.dash-bottom {
+    padding: 10px;
+}
+
 .content {
     background: linear-gradient(45deg, #bed3ef9f 0%, #d3d6e954 100%, #B6D0D8 100%);
     grid-area: content;
     display: grid;
-    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template: auto-fit auto-fit / auto-fit auto-fit;
     grid-template-areas:
         "posts friends"
         "posts trending";
@@ -122,11 +126,41 @@ main {
 .posts {
     grid-area: posts;
     padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.pet-post {
+    width: 200px;
+    height: 50px;
+}
+
+.posts img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 1px black;
 }
 
 .friends {
     grid-area: friends;
     padding: 10px;
+}
+
+.friend-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    padding: 10px;
+}
+
+.friends img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: solid 2px black;
 }
 
 .trending {
@@ -149,5 +183,32 @@ h1 {
 }
 
 p {
+    padding: 5px;
+}
+
+button {
+    font-size: 20px;
+    border-radius: 50%;
     padding: 10px;
+    color: black;
+    background: linear-gradient(45deg, #bed3ef9f 0%, #d3d6e954 100%, #B6D0D8 100%);
+    border: solid 1px black;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #BED3EF 0%, #D3D6E9 100%, #B6D0D8 100%);
+    color: white;
+    border: solid 1px white;
+    cursor: pointer;
+}
+
+a {
+    color: gray;
+    outline: black;
+    font-weight: 200;
+}
+
+a:hover {
+    color: white;
+    cursor: pointer;
 }
